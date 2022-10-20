@@ -9,8 +9,13 @@ It is often useful to create a virtual environment for Python packages, since de
 5. ```pip install -r requirements.txt```
 
 
+# To Run Application
 
-http://127.0.0.1:8000/
+## Environment file
+
+```docker-compose build```
+```docker-compose up```
+Access page at http://127.0.0.1:8000/
 
 ```
 docker exec -it  digitaloceanpythondeployment_db_1 bash

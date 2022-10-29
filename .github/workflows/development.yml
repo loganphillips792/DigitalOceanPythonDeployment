@@ -50,7 +50,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: my-docker-hub-namespace/my-docker-hub-repository
+          images: dockedupstream/digitaloceanpythondevelopment
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:

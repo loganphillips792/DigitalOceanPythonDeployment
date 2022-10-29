@@ -26,3 +26,12 @@ jobs:
           # To extract percentage: https://unix.stackexchange.com/questions/690810/using-sed-to-parse-score
           COVERAGE=$(pytest --verbose --doctest-modules --color=yes --cov=main --cov-report=term | grep TOTAL | sed 's/.*[[:blank:]]//')
           echo "overall test coverage is $COVERAGE"
+          #if [[ $COVERAGE < 2 ]] then echo "yes"; else echo "no"; fi
+          COVERAGE_REMOVE_PERCENT=$(echo $COVERAGE | sed 's/\%//g')
+          if [[ $COVERAGE_REMOVE_PERCENT -le 75 ]]
+          then
+            echo "COVERAGE IS BELOW THRESHOLD";
+            exit 1
+          else 
+            echo "COVERAGE IS ABOVE THRESHOLD, CONTINUING"; 
+          fi

@@ -1,0 +1,5 @@
+name: Development Workflow
+on:
+  push:
+    branches:
+      - main

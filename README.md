@@ -39,3 +39,7 @@ https://www.reddit.com/r/Python/comments/jar4rd/linters_which_one/
 https://www.reddit.com/r/docker/comments/ycwyzc/how_do_you_push_a_new_docker_image_to_your_vps/
 
 https://www.reddit.com/r/Python/comments/m3sew6/github_actions_cicd_everything_you_need_to_know/
+
+# Running tests
+
+pytest --verbose --doctest-modules --color=yes --cov=main --cov-report=html

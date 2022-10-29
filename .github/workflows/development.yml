@@ -50,9 +50,11 @@ jobs:
           python -m pip install --upgrade pip
           echo "PYTHON VERSION IS $(python --version)"
           if [ -f backend/requirements.txt ]; then pip install -r backend/requirements.txt; fi
+        env:
+          FAIL_UNDER: 8
       - name: Run Linting
         run: |
-          pylint backend/app
+          pylint --fail-under $FAIL_UNDER backend/app
   push_to_registry:
     name: Push Docker image to Docker hub
     runs-on: ubuntu-latest

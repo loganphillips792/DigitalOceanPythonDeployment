@@ -3,3 +3,4 @@ flask-cors
 gunicorn
 pytest
 pytest-cov
+pylint

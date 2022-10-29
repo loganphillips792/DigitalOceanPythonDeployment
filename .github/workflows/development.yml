@@ -20,7 +20,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           echo "PYTHON VERSION IS $(python --version)"
-          pip install -r backend/requirements.txt
+          if [ -f backend/requirements.txt ]; then pip install -r backend/requirements.txt; fi
       - name: Run Unit tests
         run: |
-          pytest
+          # To extract percentage: https://unix.stackexchange.com/questions/690810/using-sed-to-parse-score
+          COVERAGE=pytest --verbose --doctest-modules --color=yes --cov=main --cov-report=term | grep TOTAL | sed 's/.*[[:blank:]]//'
+          echo "overall test coverage is $COVERAGE"

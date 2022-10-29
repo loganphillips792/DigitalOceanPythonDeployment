@@ -25,7 +25,7 @@ jobs:
       - name: Run Unit tests
         run: |
           # To extract percentage: https://unix.stackexchange.com/questions/690810/using-sed-to-parse-score
-          COVERAGE=$(pytest --verbose --doctest-modules --color=yes --cov=main --cov-report=term | grep TOTAL | sed 's/.*[[:blank:]]//')
+          COVERAGE=$(pytest --verbose --doctest-modules --color=yes --cov=app --cov-report=term | grep TOTAL | sed 's/.*[[:blank:]]//')
           echo "overall test coverage is $COVERAGE"
           COVERAGE_REMOVE_PERCENT=$(echo $COVERAGE | sed 's/\%//g')
           if [[ $COVERAGE_REMOVE_PERCENT -lt 75 ]]

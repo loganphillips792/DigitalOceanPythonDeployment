@@ -52,7 +52,7 @@ jobs:
           if [ -f backend/requirements.txt ]; then pip install -r backend/requirements.txt; fi
       - name: Run Linting
         run: |
-          pylint app
+          pylint backend/app
   push_to_registry:
     name: Push Docker image to Docker hub
     runs-on: ubuntu-latest

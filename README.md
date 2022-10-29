@@ -43,3 +43,8 @@ https://www.reddit.com/r/Python/comments/m3sew6/github_actions_cicd_everything_y
 # Running tests
 
 pytest --verbose --doctest-modules --color=yes --cov=main --cov-report=html
+
+# Running lint
+
+cd /Users/logan/Desktop/DigitalOceanPythonDeployment/backend
+pylint app

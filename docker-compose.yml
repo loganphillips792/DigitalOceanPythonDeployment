@@ -2,7 +2,7 @@ version: '2'
 services:
   api:
     build: backend/
-    command: gunicorn -w 4 main:app --access-logfile /access.log --error-logfile /error.log -w 2 --threads 2 -b 0.0.0.0:5000
+    command: gunicorn -w 4 app.main:app --access-logfile /access.log --error-logfile /error.log -w 2 --threads 2 -b 0.0.0.0:5000
 
     ports:
       - "8000:5000"

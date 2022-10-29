@@ -25,3 +25,17 @@ psql -U logan -d example
 OR 
 
 ```docker exec -it digitaloceanpythondeployment_db_1 psql -U logan -d example```
+
+
+
+
+
+https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+https://flake8.pycqa.org/en/latest/index.html
+https://www.reddit.com/r/Python/comments/jar4rd/linters_which_one/
+
+    Add both pylint and flake
+
+https://www.reddit.com/r/docker/comments/ycwyzc/how_do_you_push_a_new_docker_image_to_your_vps/
+
+https://www.reddit.com/r/Python/comments/m3sew6/github_actions_cicd_everything_you_need_to_know/

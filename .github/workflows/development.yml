@@ -21,3 +21,6 @@ jobs:
           python -m pip install --upgrade pip
           echo "PYTHON VERSION IS $(python --version)"
           pip install -r backend/requirements.txt
+      - name: Run Unit tests
+        run: |
+          pytest

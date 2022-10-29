@@ -46,5 +46,5 @@ pytest --verbose --doctest-modules --color=yes --cov=main --cov-report=html
 
 # Running lint
 
-cd /Users/logan/Desktop/DigitalOceanPythonDeployment/backend
-pylint app
+cd /Users/logan/Desktop/DigitalOceanPythonDeployment
+pylint backend/app
